@@ -1,3 +1,5 @@
+/*from dodng
+2016.12.9*/
 #include <stdio.h>
 #include "ring_queue.h" 
 #include <unistd.h>
