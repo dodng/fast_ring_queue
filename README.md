@@ -9,7 +9,7 @@ Queue is a common data structure, this structure ensures that the data is "first
 
 ###2.2. Element space can be reused
 
-###2.3. Provides an efficient mechanism for multithreaded data communication.
+###2.3. Provides an efficient mechanism for multithread data transfer.
 
 
 ##3. Ring queue of work scenes
