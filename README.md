@@ -1,8 +1,9 @@
-##1. What is a circular queue
+##1. What is a ring queue
 
-Queue is a common data structure, this structure ensures that the data is in accordance with the "first in first out" principle to operate, that is the first to go out of the elements is the first out of the element.Circular queue is a special queue structure , To ensure that the elements are FIFO, but the difference with the general queue is that they are circular, that is, queue head is the last element of the queue tail, usually a fixed number of elements to accommodate a closed loop.
+Queue is a common data structure, this structure ensures that the data is "first in first out". Ring queue is a special queue structure , To ensure the data are FIFO, but the difference with queue is that they are ring, that is, the prev data of queue head is the queue tail,the data of ring can reuse.
 
-##2. The advantages of circular queue
+
+##2. The advantages of ring queue
 
 ###2.1. Guaranteed elements are first-in, first-out
 
@@ -10,9 +11,11 @@ Queue is a common data structure, this structure ensures that the data is in acc
 
 ###2.3. Provides an efficient mechanism for multithreaded data communication.
 
-##3. Circumstantial queue of work scenes
 
-(Linux system for PACKET_RX_RING and PACKET_TX_RING support in essence is a kernel to achieve a ring queue), such as the use of multi-threaded data transfer,
+##3. Ring queue of work scenes
+
+(Linux system for PACKET_RX_RING and PACKET_TX_RING support in essence is a kernel to achieve a ring queue), such as the use of multi-threaded data transfer data.
+
 
 ##4. Actual test results
 
