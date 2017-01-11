@@ -17,6 +17,8 @@ const int LOOP_SIZE = 10000;
 
 #define THREAD_NUM 1
 
+#define DATA_TYPE int
+
 void *customer(void *arg)
 {
 	Ring_Queue queue = *(Ring_Queue *)arg;
@@ -26,7 +28,7 @@ void *customer(void *arg)
 		for(int i = 0;i < LOOP_SIZE; )
 		{
 			int *p = 0;
-			p = (int *)queue.SOLO_Read();
+			p = (DATA_TYPE *)queue.SOLO_Read();
 			if (p)
 			{
 				assert(i == *p);
@@ -51,7 +53,7 @@ void *producer(void *arg)
 		for(int i = 0;i < LOOP_SIZE; )
 		{
 			int *p = 0;
-			p = (int *)queue.SOLO_Write();
+			p = (DATA_TYPE *)queue.SOLO_Write();
 			if (p)
 			{
 				*p = i;
@@ -74,7 +76,7 @@ int main(int argc,char *argv[])
 {
 	pthread_t tid_customer[THREAD_NUM];
 	pthread_t tid_producer[THREAD_NUM];
-	Ring_Queue *queue = new Ring_Queue[THREAD_NUM](LOOP_SIZE,4);
+	Ring_Queue *queue = new Ring_Queue[THREAD_NUM](LOOP_SIZE,sizeof(DATA_TYPE));
 
 	for (int i = 0; i < THREAD_NUM; i++)
 	{
