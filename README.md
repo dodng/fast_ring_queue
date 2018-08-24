@@ -27,5 +27,5 @@
 
 * In CentOS 5.5 (cpu per core frequency 1200MHz) . 
 * ring queue length is 10000, one element data size is 4 bytes
-* [ring_test] the element writted and then to read is about 2.5 million per second.
-* [notify_ring_test] the element writted and then to read is about 2.0 million per second.
+* [ring_test] the element writted and then to read is about 25 million per second.
+* [notify_ring_test] the element writted and then to read is about 20 million per second.
